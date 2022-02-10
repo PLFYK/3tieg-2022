@@ -39,7 +39,6 @@ def main():
                     zmienna=zmienna-20
                 elif zdarzenie.key==pygame.K_DOWN:
                     zmienna=zmienna +20
-                obiektWaz.ruch(zmienna2,zmienna)
                 #sprawdzenie czy waz nie zjada siebie
                 #for location in pozycja[::]:
                  #   if zmienna==location[1] and zmienna2==location[0]:
@@ -53,6 +52,7 @@ def main():
                # if len(pozycja)>dlugoszWeza:
                 #    del pozycja[0]
         obiektWaz.rysowanie(OknoGry)
+        obiektWaz.ruch(zmienna2,zmienna)
         #tworzenie kwadratu jako weza
         #r=pygame.Rect((zmienna2,zmienna),(20,20))
         #pygame.draw.rect(OknoGry,(255,0,0),r)
@@ -70,14 +70,26 @@ def main():
             appleY=random.randint(0,21)*20+10
             pygame.draw.circle(OknoGry,(128,128,128),(appleX,appleY),10)
             #zwiekszenie liczby punktow
-            punkty=punkty+1
+            #punkty=punkty+1
         #wypisanie punktow na ekran
         czcionka=pygame.font.SysFont('comicsans',30)
-        tekst=czcionka.render("Zdobyłes punkty: {0}".format(punkty),1,(0,255,0))
+        tekst=czcionka.render("Zdobyłes punkty: {0}".format(obiektWaz.punkty),1,(0,255,0))
         OknoGry.blit(tekst, (10,10))
-        #zmienna=zmienna +20
-        if zmienna>420:
-            zmienna=0
+        
+        #pobieranie pozycji glowy
+        glowa=obiektWaz.getPosition()
+        #prawa czesc okna
+        if glowa[0]>420:
+            obiektWaz.setPosition(0,glowa[1])
+        #lewa czesc okna
+        if glowa[0]<0:
+            obiektWaz.setPosition(420,glowa[1])
+        #gora czesc okna
+        if glowa[1]<0:
+            obiektWaz.setPosition(glowa[0],420)
+        #dolna czesc okna
+        if glowa[1]>420:
+            obiektWaz.setPosition(glowa[0],0)
         #zmienna2=zmienna2 +20
         if zmienna2>420:
             zmienna2=0
