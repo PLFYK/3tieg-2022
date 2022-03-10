@@ -1,4 +1,5 @@
 import pygame
+
 class Waz():
     #konstruktor klasy
     #tworzy podstawowe elementy klasy podczas wywołania jej
@@ -6,7 +7,7 @@ class Waz():
         self.__pozycja=[(100,100)]
         self.dlugoscWeza=1
         self.punkty=0
-        self.kierunek=(-1,0)
+        self.kierunek=(0,-1)
     def getPosition(self):
         return self.__pozycja[-1]
     def setPosition(self,x,y):
@@ -14,7 +15,7 @@ class Waz():
     def setKierunek(self,direction):
             self.kierunek=direction
     def ruch(self):
-        #obliczanie nowej pozycji
+        #obliczenie nowej pozycji
         ostatniaPozycja=self.__pozycja[-1]
         x=ostatniaPozycja[0]+20*self.kierunek[0]
         y=ostatniaPozycja[1]+20*self.kierunek[1]
@@ -26,14 +27,14 @@ class Waz():
                     self.punkty=0
         #dodanie nowej pozycji weza
         self.__pozycja.append((x,y))
-        #usuwanie pozycji weza
+         #nie usuwamy pozycji gdy waz zjadl jablko
         if len(self.__pozycja)>self.dlugoscWeza:
             del self.__pozycja[0]
-        #funcja zjadania jablka
+    #funkcja zjadania jablka
     def zjadanie(self):
-            #self.dlugoscWeza=self.dlugoscWeza+1
-            self.dlugoscWeza+=1
-            self.punkty+=1
+        #self.dlugoscWeza=self.dlugoscWeza+1
+        self.dlugoscWeza+=1
+        self.punkty+=1
     #funkcja rysująca węża
     #jako parametry wywołania używa self - samej siebie oraz OknoGry- tam gdzie będziemy rysować węża
     def rysowanie(self, OknoGry):
