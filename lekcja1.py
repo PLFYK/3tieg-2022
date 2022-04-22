@@ -3,26 +3,28 @@ import random
 import waz
 import jablko
 
-#zmienne globalne 
+#zmienne globalne
 rozdzielczosc=440
-kolorWaz1=(255,255,0)
-kolorWaz2=(0,255,255)
 obiektWaz1=waz.Waz()
 obiektWaz2=waz.Waz()
 def zmianaKolorWaz1(kolor):
     obiektWaz1.ustawKolor(kolor)
 def zmianaKolorWaz2(kolor):
     obiektWaz2.ustawKolor(kolor)
-iloscJablek=3
-def zmianaIloscJablek(ilosc):
+iloscJablek=1
+def zmianaIlosciJablek(ilosc):
     iloscJablek=ilosc
-
 def main():
     pygame.init()
-    OknoGry=pygame.display.set_mode((rozdzielczosc,rozdzielczosc),0)
+    OknoGry=pygame.display.set_mode((rozdzielczosc,rozdzielczosc),0,32)
     pygame.display.set_caption("3tieg")
-    run=True 
+    run=True
+    
     #wywołanie klasy waz
+    
+    
+    
+
     #tworzenie kilku jablek
     obiektJablko=[]
     for nrJablko in range(0,iloscJablek):
@@ -76,6 +78,7 @@ def main():
             pozJablko=obiektApple.getPozycja()
             if (poz1[1]+10==pozJablko[1] and poz1[0]+10==pozJablko[0]):
                 obiektWaz1.zjadanie()
+                #wylosowanie nowej pozycji jablka
                 obiektApple.losujPozycje()
             if (poz2[1]+10==pozJablko[1] and poz2[0]+10==pozJablko[0]):
                 obiektWaz2.zjadanie()
@@ -84,8 +87,9 @@ def main():
             #appleX=random.randint(0,21)*20+10
             #appleY=random.randint(0,21)*20+10
             #pygame.draw.circle(OknoGry,(128,128,128),(appleX,appleY),10)
-        obiektWaz1.czyKtosMnieUgryzl(poz2)
-        obiektWaz2.czyKtosMnieUgryzl(poz1)
+        #zjadanie się wężów nawzajem
+        obiektWaz1.czyKtosMnieUgryzl(poz2) 
+        obiektWaz2.czyKtosMnieUgryzl(poz1)   
         #wypisanie punktow na ekran
         czcionka=pygame.font.SysFont('comicsans',20)
         tekst=czcionka.render("Punkty gracz 1: {0}".format(obiektWaz1.punkty),1,(0,255,0))
@@ -93,34 +97,7 @@ def main():
         OknoGry.blit(tekst, (10,10))
         OknoGry.blit(tekst2, (10,30))
         
-        #pobieranie pozycji głowy
-        glowa1=obiektWaz1.getPosition()
-        glowa2=obiektWaz2.getPosition()
-        #sprawdzanie przejścia przez krawędź okna
-        #prawa częśc okna
-        if glowa1[0]>rozdzielczosc-20:
-            obiektWaz1.setPosition(0,glowa1[1])
-        #lewa część okna
-        if glowa1[0]<0:
-            obiektWaz1.setPosition(rozdzielczosc,glowa1[1])
-        #dół ekranu
-        if glowa1[1]>rozdzielczosc-20:
-            obiektWaz1.setPosition(glowa1[0],0)
-        #góra ekranu
-        if glowa1[1]<0:
-            obiektWaz1.setPosition(glowa1[0],rozdzielczosc-20)
         
-        if glowa2[0]>rozdzielczosc-20:
-            obiektWaz2.setPosition(0,glowa2[1])
-        #lewa część okna
-        if glowa2[0]<0:
-            obiektWaz2.setPosition(rozdzielczosc-20,glowa2[1])
-        #dół ekranu
-        if glowa2[1]>rozdzielczosc-20:
-            obiektWaz2.setPosition(glowa2[0],0)
-        #góra ekranu
-        if glowa2[1]<0:
-            obiektWaz2.setPosition(glowa2[0],rozdzielczosc-20)
 
 
         pygame.display.update()
