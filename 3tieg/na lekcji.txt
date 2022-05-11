@@ -1,0 +1,22 @@
+1.przedstawienia związków pomiędzy encjami używany w projektowaniu i do zademonstrowania konceptualnych modeli danych
+2.Dzięki narzędziom CASE, proces tworzenia systemu staje się o wiele krótszy
+pociągając za sobą mniejsze koszty. Ponadto narzędzia CASE zapewniają wyższą jakość
+tworzonego systemu. Narzędzia CASE zawierają w sobie inżynierię dwustronną: inżynieria
+do przodu oraz inżynieria wstecz. 
+3.Fizyczny model danych opisuje fizyczną strukturę bazy danych. Logiczny model danych to model wysokiego poziomu, który nie opisuje fizycznej struktury bazy danych.
+4.Na jakie etapy można podzielić proces projektowania relacyjnych baz danych?
+Cały proces projektowania bazy danych możemy podzielić na kilka etapów:
+planowanie bazy danych,
+tworzenie modelu konceptualnego (diagramu ERD),
+transformacja modelu konceptualnego na model relacyjny,
+proces normalizacji bazy danych,
+wybór struktur i określenie zasad dostępu do bazy danych.
+5.Strategia top-down
+Od ogółu do szczegółu - najpierw definiuje się ogólne pojęcia,
+a następnie rozwija się je poprzez dodawanie szczegółów stosując
+elementy podstawowe (prymitywy).
+Strategia inside-out
+Rozprzestrzenianie - najpierw definiuje się pojęcia, które wydają się
+być najważniejsze, a następnie rozwija się je poprzez dobudowywanie
+kolejnych pojęć, które stanowią ich uzupełnienie.
+6.falsz

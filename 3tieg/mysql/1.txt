@@ -1,0 +1,17 @@
+1.create database szkola1;
+
+2.drop database szkola1;
+
+3.create table ksiazki1(idksiazki INT auto_increment primary key, imieautora TEXT, nazwiskoautora TEXT, tytul TEXT, cena float);
+
+4.drop table ksiazki;
+
+5.alter table ksiazki ADD wydawnictwo VARCHAR(15)
+
+6.alter table ksiazki ADD rokwydania INT after tytul 
+
+7.alter table ksiazki drop column wydawnictwo 
+
+4.4.create table osoba(ID INT NOT NULL auto_increment primary key,imie varchar(200), nazwisko varchar(200));
+
+3.3.alterr table ksiazki ADD primary key(idksiazki);

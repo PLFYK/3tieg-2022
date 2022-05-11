@@ -1,0 +1,26 @@
+<body>
+<form>
+    <input type="number" id="liczba">
+    <input type="button" onclick="stefan()" value="oblicz">
+</form>
+
+<script>
+    function stefan(){
+    var a = document.getElementById("liczba").value
+    a=parseInt(a)
+    if(a%2==0){
+        for(i=0;i<10;i++){
+            document.write(a+" ");
+            a=a+2;
+        };
+    }
+    else{
+            a+=1;
+            for(i=0;i<10;i++){
+            document.write(a+" ");
+            a=a+2;
+        };
+    };
+    };
+</script>
+</body>

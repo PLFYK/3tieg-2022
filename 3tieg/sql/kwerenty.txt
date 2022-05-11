@@ -1,0 +1,5 @@
+SELECT `Opis` from postac where Gra_ID=1
+SELECT * from postac where Gra_id=1 or Gra_id=8
+SELECT nazwa,siła,Zrecznosc,Intelekt,Roztropnosc,moc from postac,atrybuty WHERE postac.Atrybuty_ID=atrybuty.id
+SELECT nazwa from producent where nazwa="GamerSoft"
+SELECT nazwa,Kategoria_wiekowa_ID from gra where Kategoria_wiekowa_ID<5

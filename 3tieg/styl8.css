@@ -1,0 +1,41 @@
+body{
+    font-family: Georgia;
+}
+#logo, #menu{
+    background-color: #63ac74;
+    color: orange;
+    height: 140px;
+    width: 50%;
+    text-align: right;
+    font-size: 160%;
+    float: left;
+}
+#glowny{
+    background-color: #e3f6e7;
+    height: 500px;
+    padding: 20px;
+}
+.stopka{
+    background-color: #63ac74;
+    height: 150px;
+    width: 25%;
+    float: left;
+}
+a{
+    color: orange;
+    margin: 15px;
+}
+table{
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: green;
+    border: 2px solid green;
+}
+th{
+    background-color: #63ac74;
+    color: white;
+}
+.doPrawej{
+    text-align: right;
+}
