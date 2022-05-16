@@ -33,6 +33,15 @@ function wybSpec(){
 }
 function ustawWolne(){
     iloscWolnychZn=+iloscZn-(+iloscCyfr+ +iloscMaleL+ +iloscDuzeL+ +iloscSpec);
+
+    //sprawdzanie czy nie mamy zaduzo wybranych znakow
+    if(iloscWolnychZn<0){
+        reset();
+        iloscWolnychZn=iloscZn;
+        alert("Błędna ilosc znakow - za duzo wybranych. Zresetowano ustawienia")
+    }
+
+
     document.getElementById("wynik").value=iloscWolnychZn;
     document.getElementById("iloscCyfr").max=+iloscCyfr+ +iloscWolnychZn;
     document.getElementById("iloscMaleL").max=+iloscMaleL+ +iloscWolnychZn;
@@ -59,6 +68,9 @@ function generujHaslo(){
     }
     for(let i=0;i<iloscSpec;i++){
         haslo+=alfabetSpec.charAt(Math.floor(Math.random()*alfabetSpec.length));
+    }//losowanie nie wybranych typow znakow(wolnych znakow)
+    for(let i=0;i<iloscWolnychZn;i++){
+        haslo+=alfabetMale.charAt(Match.floor(Math.random()*alfabetMale.length));
     }
     document.getElementById("test").value=zmianaKolejnosci(haslo);
 }
@@ -72,4 +84,14 @@ function zmianaKolejnosci(haslo){
     }
     haslo=wynik.join('');
     return haslo;
+}
+function reset(){
+    iloscCyfr=0;
+    document.getElementById("iloscCyfr").value=0;
+    iloscDuzeL=0;
+    document.getElementById("iloscDuzeL").value=0;
+    iloscMaleL=0;
+    document.getElementById("iloscMaleL").value=0;
+    iloscSpec=0;
+    document.getElementById("iloscSpec").value=0;
 }

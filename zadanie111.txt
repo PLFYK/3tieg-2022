@@ -1,0 +1,16 @@
+interfejs 232 działa w sposób taki że działa w trybie dupleksowym.
+co pozwala na jednoczesne przesyłanie i odbieranie informacji, ponieważ do odbierania i przesyłania wykorzystywane są różne linie.
+ Został on opracowany na potrzeby obsługi modemów (o czym świadczą nazwy sygnałów sterujących) przez amerykańskie stowarzyszenie EIA
+ ( Electronic Industries Assocation ). W sierpniu 1969 roku wprowadzono zrewidowaną normę oznaczoną RS-232C, która reprezentuje powszechnie 
+akceptowany sposób transmisji danych na nieduże odległości (do 15m) , z szybkością do 115 kbitów/s.Standard RS-232C został później przyjęty w
+ Europie przez komitet normalizacyjny CCITT i otrzymał oznaczenie V24. W komputerach osobistych stał się on standardem łącza szeregowego.
+ W systemach operacyjnych portom takim przyznano nazwy logiczne COMn ( gdzie n oznacza numer portu). 
+Oprócz obsługi modemów , interfejs umożliwia podłączenie takich urządzeń jak mysz czy drukarka. 
+Może posłużyć również do połączenia bezpośrednio dwóch komputerów (przez tzw. Kabel Null-Modem)
+ Został on opracowany na potrzeby obsługi modemów (o czym świadczą nazwy sygnałów sterujących) przez amerykańskie stowarzyszenie EIA
+ ( Electronic Industries Assocation ). W sierpniu 1969 roku wprowadzono zrewidowaną normę oznaczoną RS-232C, która reprezentuje powszechnie
+ akceptowany sposób transmisji danych na nieduże odległości (do 15m) , z szybkością do 115 kbitów/s.Standard RS-232C został później przyjęty w Europie
+ przez komitet normalizacyjny CCITT i otrzymał oznaczenie V24. W komputerach osobistych stał się on standardem łącza szeregowego. W systemach operacyjnych
+ portom takim przyznano nazwy logiczne COMn ( gdzie n oznacza numer portu). Oprócz obsługi modemów , interfejs umożliwia podłączenie takich urządzeń jak mysz 
+czy drukarka.
+ Może posłużyć również do połączenia bezpośrednio dwóch komputerów (przez tzw. Kabel Null-Modem)
