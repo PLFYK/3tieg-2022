@@ -1,0 +1,38 @@
+1.create database siatkowka;
+2.create table siatkarz(id INT primary key auto_increment, imie varchar(45), nazwisko varchar(45), narodowosc varchar(45), wzrost INT, waga INT, numer INT, dataUrodzenia DATE);
+3.create table klub(id INT primary key auto_increment, nazwa varchar(45), ulica varchar(45), nrDomu varchar(10), miejscowosc varchar(45), kodPocztowy varchar(5));
+4.create table mecz(id INT primary key auto_increment, data DATE, gospodarzId INT, goscieID INT, wynik varchar(3));
+5.create table statystyki(id INT primary key auto_increment, idMecz INT, idZawodnik INT, punkty INT, asy INT, bloki INT, zagrywki INT, przyjecie FLOAT, ocena FLOAT);
+6.insert into siatkarz values(null, "Tomasz", "Formal", "Polak", "200", "92", "21", "1997-08-31");
+7.insert into siatkarz values(null, "Rafal", "Szymura", "Polak", "197", "102", "26", "1995-08-39");
+8. insert into siatkarz values(null, "Nicolas", "Szerszen", "Polak", "195", "91", "9", "1996-12-31");
+9.insert into siatkarz values(null, "Lukasz", "Kaczmarek", "Polak", "204", "102", "2", "1994-06-29");
+10.SELECT * FROM `siatkarz`
+11.insert into klub values(null, "Jastrzebski Wegiel", "Jana Pawla II", "6", "Jastrzebie Zdroj", "44335");
+12.insert into klub values(null, "Grupa Azoty ZAKSA Kedzierzyn Kozle", "Mostowa", "1a", "Kedzierzyn Kozle", "47224");
+13. insert into klub values(null, "Asseco Resovia Rzeszow", "Podpromie", "10", "Rzeszow", "35030");
+14.select * from klub;
+15. insert into mecz values(null, "2020-09-20", "Jastrzebski Wegiel", "Asseco Resovia", "3:2");
+16.insert into mecz values(null, "2021-11-05", "Zaska", "Jastrzebski Wegiel", "3:1");
+17.SELECT * FROM `mecz`
+18.insert into statystyki values(null, 1, 1, "10", "2", "1", "14", "0,67", "6,7");
+19. insert into statystyki values(null, 1, 2, "8", "0", "2", "15", "0,53", "6,1");
+20.insert into statystyki values(null, 2, 1, "15", "3", "1", "17", "0.68", "6.8");
+21.SELECT * FROM `statystyki`
+22.SELECT * FROM `statystyki` WHERE id=1
+23.
+25.SELECT sum(punkty) FROM `statystyki` WHERE idZawodnik=1
+26.ALTER TABLE statystyki ADD bledy int
+28.
+29.
+30.
+31.
+32.
+33.
+34.
+35.
+36.
+37.show tables;
+38.SELECT * FROM `klub`
+39.
+40.

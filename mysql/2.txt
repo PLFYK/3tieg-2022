@@ -1,0 +1,14 @@
+1.UPDATE KLIENT SET MIEJSCOWOSC="KATOWICE";
+2.UPDATE KLIENT SET MIEJSCOWOSC="KATOWICE" WHERE IMIE="agnieszka" and nazwisko="nowak";
+3.delete from klient where imie=rafal;
+4.delete from klient where nazwisko="nowak" limit 3
+
+1.select imie,nazwisko from klient;
+2.select * from ksiazki;
+3.select distinct  miejscowosc from klient;
+4.select (cena*0.8) as "cena_promocyjna" from ksiazka;
+
+1.select round((cena*0.8),2) as "cena_promocyjna) from ksiazka;
+2.select tytul as "tytul ksiazki", contact(imie,nazwisko) as "imie ,,", nazwisko autora" from ksiazki
+3.select imie,nazwisko from klient order by nazwsko ASC;
+4.imie,nazwisko,miejscowosc from klient order by nazwsko,miejscowosc ASC

@@ -7,7 +7,7 @@
     <title>Algorytmy matematyczne</title>
     <script src="skrypt.js"></script>
 </head>
-<body>
+<body style="background-color: green; color:black">
     <div id="container">
         <header>
             <h1>Algorytmy matematyczne</h1>
@@ -16,9 +16,17 @@
             <h2>Algorytm Euklidesa</h2>
             <p>Podaje liczbe a:<input type="number" id="liczbaA"></p>
             <p>Podaje liczbe b:<input type="number" id="liczbaB"></p>
-            <input type="button" id="obliczEuklides" onclick="euklides()" value="Oblicz NWM">
+            <input type="button" id="obliczNWW" onclick="euklides()" value="Oblicz NWM">
             <p>Najwiekszy wspolny dzielnik to: <output id="euklidesWynik"></output></p>
         </div>
     </div>
+    <div id="NWW">
+        <h2>Najmniejsza wspolna wielokrotnosc</h2>
+        <p>Podaje liczbe a:<input type="number" id="liczbaANWW"></p>
+            <p>Podaje liczbe b:<input type="number" id="liczbaBNWW"></p>
+            <input type="button" id="obliczEuklides" onclick="nww()" value="Oblicz NWW">
+            <p>Najwiekszy wspolna wielokrotnosc to: <output id="nwwWynik"></output></p>
+    </div>
+    
 </body>
 </html>

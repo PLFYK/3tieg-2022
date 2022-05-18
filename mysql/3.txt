@@ -1,0 +1,22 @@
+1.select count(ksiazki) as "liczba ksiazek" from ksiazki;
+2.select round(sum(cena),2) as "Razem" from ksiazki:
+3..select round(sum(cena),2) as "Srednia" from ksiazki:
+4..select round(sum(cena),2) as "Srednia PHP" from ksiazki where nazwa like "PHP";
+
+1.select max(cena) as "Najwyzsza cena" from ksiazki;
+2.select data as "Najstarsze zamowienie" from zamowienie oder by data ASC limit 1;
+3.select rok_wydania, count(liczba_egzemplarzy) as "liczba egzemplarzy" from ksiazki group by rok_wydania order by 2;
+4.select miejscowosc,count(klient) as "liczba klientow" from klient group by miejscowosc;
+
+1.select rokwydania,ilosc from ksiazki group by rokwydania where rokwydania>2010;
+2.alter table zamowienia add idklient INT;
+alter table zamowienia add forgive key(idklient) references ksiazki(idklient);
+
+1.create user ,mod '@'localhost identified by "zaq1@WSX";
+2.select password(zaq1@WSX)
+3.create user, uzytkownik1'@% identified by "haslo"
+4.create user,uzytkownik1 '@'123.159.11.15' identified by "haslo"
+5.grand select on baza.samochody to 'user1'@'localhost
+6.grand alter,delete on komis.* to, user1'@'localhost
+7.revoke delete on komis komis.* from user1'@'localhost
+

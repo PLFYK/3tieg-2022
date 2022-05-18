@@ -4,12 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gotowanie jajka</title>
     <script src="skrypt.js"></script>
+    <style>
+        #krok2{
+            visibility: hidden;
+        }
+        #krok3{
+            visibility: hidden;
+        }
+        #takkrok3{
+            visibility: hidden;
+        }
+        #niekrok2{
+            visibility: hidden;
+        }
+        #gotowe{
+            visibility: hidden;
+        }
+        #niekrok3{
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Algorytm gotowania jajka</h1>
+    </div>
+    <div id="niekrok3">
+        <p>Wlacz kuchenke</p>
+    </div>
+    <div id="krok1">
+        <p>Przygotuj garnek,jajka,wode i kuchenke</p>
+        <form>
+            Czy wykonales powyzsze zadanie?
+            <input type="button" value="Tak" onclick="tak()">
+        </form>
+    </div>
+    <div id="krok2">
+        <p>Sprawdz czy woda jest zimna i czy jajko jest umieszczone w garnku z woda</p>
+        <form>
+            <input type="button" value="Tak" onclick="tak2()">
+            <input type="button" value="Nie" onclick="nie2()">
+        </form>
+    </div>
+    <p id="niekrok2">Wlej zimna wode do garnka i wloz jajka do niego.A potem przejdzz do kroku 3</p>
+    <div id="krok3">
+        <p>Sprawdz czy kuchenka jest wlaczona</p>
+        Czy wszystko jest zgodne z intrukcja?
+        <form>
+            <input type="button" value="Tak" onclick="tak3()">
+            <input type="button" value="Nie" onclick="nie3()">
+        </form>
+    </div>
+    <div id="takkrok3">
+        <p>Postaw garnek na kuchenke na 10min</p>
+        Czy minelo 10min?
+        <form>
+            <input type="button" value="Tak" onclick="dzminut()">
+        </form>
+    </div>
+    <div id="gotowe">
+        <p>Gotowe - jajka ugotowane!</p>
     </div>
 </body>
 </html>

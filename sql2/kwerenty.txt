@@ -1,0 +1,5 @@
+1.SELECT kategoria_wiekowa.Kategoria,producent.Nazwa,gra.Nazwa from gra,kategoria_wiekowa,producent where gra.kategoria_wiekowa_id
+=kategoria_wiekowa_id and producent.id=gra.producent_id
+2.SELECT Nazwa,kategoria_wiekowa_ID from gra where kategoria_wiekowa_ID<3
+3.select gra.Nazwa,producent.Nazwa from gra,producent where producent.kraj not like "Polska" and producent.ID=gra.producent_ID
+4.
